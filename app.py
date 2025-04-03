@@ -3,10 +3,15 @@ from openai import OpenAI
 import requests
 from PIL import Image
 from io import BytesIO
+from dotenv import load_dotenv
+import os
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Initialize OpenAI client with Together.ai base URL
 client = OpenAI(
-    api_key=st.secrets['together_api_key'],
+    api_key=os.getenv('Together_api_key'),
     base_url="https://api.together.xyz/v1"
 )
 
