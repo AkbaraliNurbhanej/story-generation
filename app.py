@@ -1,10 +1,11 @@
 import streamlit as st
-from openai import OpenAI
+from openai import OpenAI as OpenAIClient
 import requests
 from PIL import Image
 from io import BytesIO
 from dotenv import load_dotenv
 import os
+from openai import OpenAI  # Import OpenAI class
 
 # Load environment variables from .env file
 load_dotenv()
